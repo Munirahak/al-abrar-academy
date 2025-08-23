@@ -10,6 +10,7 @@
     <!-- Page Header -->
     <header>
       <h1>About Our School</h1>
+      <br />
       <p>
         Learn more about our founder, mission, vision, core values, and history.
       </p>
@@ -17,34 +18,45 @@
 
     <!-- Founder -->
     <section class="container founder">
-      <img src="assets/img/founder.jpg" alt="Founder of the School" />
+      <img
+        class="scroll-reveal"
+        src="assets/al-abrar9.jpg"
+        alt="Founder of the School"
+      />
       <div>
-        <h2>About the Founder</h2>
-        <p>
-          Our founder, <strong>Dr. John Doe</strong>, established the school
-          with a vision to provide quality education that nurtures excellence,
-          discipline, and lifelong learning. With decades of experience in
-          education and leadership, Dr. Doe’s legacy continues to inspire
-          generations of learners.
+        <h2 class="scroll-reveal">About the Founder</h2>
+        <p class="scroll-reveal">
+          <strong>Mal. Jamilu Gambo</strong> is the visionary founder and
+          proprietor of Al-Abrar Academy Katsina. Motivated by the concern that
+          youth education, especially religious education, has been declining,
+          he established the school to provide children with a balanced,
+          high-quality education that combines conventional academics with
+          strong proficiency in English and Arabic, alongside Qur’an recitation
+          from the primary level. <strong>Mal. Gambo</strong> believes that by
+          giving children proper education from an early age, their lives will
+          be well-directed, and this foundation will produce responsible and
+          capable leaders for the future, as children are the leaders of
+          tomorrow..
         </p>
       </div>
     </section>
 
     <!-- Mission & Vision -->
     <section class="container">
-      <h2>Mission & Vision</h2>
+      <h2 class="scroll-reveal">Mission & Vision</h2>
       <div class="mission-vision">
         <div class="card">
-          <h3>🎯 Mission</h3>
-          <p>
-            To deliver world-class education that fosters academic excellence,
-            character building, and leadership skills, preparing students for
-            success in a global society.
+          <h3 class="scroll-reveal">🎯 Mission</h3>
+          <p class="scroll-reveal">
+            Our mission is to nurture morally upright, intellectually vibrant,
+            and spiritually enlightened students by providing a holistic
+            education that blends conventional academics with strong language
+            proficiency.
           </p>
         </div>
         <div class="card">
-          <h3>🌍 Vision</h3>
-          <p>
+          <h3 class="scroll-reveal">🌍 Vision</h3>
+          <p class="scroll-reveal">
             To be recognized as a leading institution of learning where students
             thrive academically, socially, and morally, contributing positively
             to the world.
@@ -109,5 +121,83 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: Logo & About -->
+        <div class="footer-col">
+          <img src="assets/al-abrar.jpg" alt="school logo" />
+          <p class="footer-text">
+            Our school is dedicated to providing excellent education that
+            combines academics, morals, and discipline to shape the leaders of
+            tomorrow.
+          </p>
+        </div>
+
+        <!-- Column 2: Address & Contact -->
+        <div class="footer-col">
+          <h3 class="footer-title">Contact Us</h3>
+          <p>📍 123 Main Street, Katsina, Nigeria</p>
+          <p>📞 +234 800 123 4567</p>
+          <p>✉️ info@yourschool.com</p>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Why Choose Us</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter & Socials -->
+        <div class="footer-col">
+          <h3 class="footer-title">Newsletter</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Your School. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      function revealOnScroll() {
+        const sections = document.querySelectorAll("section"); // target sections
+        const triggerBottom = window.innerHeight * 0.85;
+
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+
+          if (rect.top < triggerBottom) {
+            const elements = section.querySelectorAll(".scroll-reveal");
+
+            elements.forEach((el, index) => {
+              setTimeout(() => {
+                el.classList.add("reveal");
+              }, index * 200); // stagger delay (200ms apart)
+            });
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealOnScroll);
+      window.addEventListener("load", revealOnScroll);
+    </script>
   </body>
 </html>
