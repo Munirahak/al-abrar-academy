@@ -7,9 +7,42 @@
     <link rel="stylesheet" href="about.css" />
   </head>
   <body>
+    <!-- nav bar -->
+    <nav class="site-nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <img src="assets/al-abrar logo.jpg" alt="Logo" />
+      </div>
+
+      <!-- Desktop/Mobile links (same list) -->
+      <ul class="nav-links" id="navLinks" aria-hidden="true">
+        <!-- Close button shown only on mobile via CSS -->
+        <li class="close-row">
+          <button class="close-btn" id="closeBtn" aria-label="Close menu">
+            ✖
+          </button>
+        </li>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger (opens overlay on mobile) -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open menu"
+        aria-controls="navLinks"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </nav>
     <!-- Page Header -->
     <header>
-      <h1>About Our School</h1>
+      <h1><u>About Our School</u></h1>
       <br />
       <p>
         Learn more about our founder, mission, vision, core values, and history.
@@ -57,9 +90,10 @@
         <div class="card">
           <h3 class="scroll-reveal">🌍 Vision</h3>
           <p class="scroll-reveal">
-            To be recognized as a leading institution of learning where students
-            thrive academically, socially, and morally, contributing positively
-            to the world.
+            Our vision is to become a globally recognized institution of
+            learning where modern education harmoniously unites with linguistic
+            and spiritual excellence. We aspire to raise students who are fluent
+            in English and Arabic, and proficient in Qur’an recitation.
           </p>
         </div>
       </div>
@@ -92,28 +126,23 @@
       <h2>Our History</h2>
       <div class="history">
         <div class="timeline-item">
-          <h3>1990 – Founding</h3>
+          <h3>May 2025 – Founding</h3>
           <p>
-            The school was established with 50 students and 5 teachers, driven
-            by the founder’s passion for quality education.
+            Established on 11th May, 2025, Al-Abrar Academy Katsina was born out
+            of the desire to provide children with conventional education
+            alongside mastery of English, Arabic, and Qur’an recitation from the
+            primary level.
           </p>
         </div>
         <div class="timeline-item">
-          <h3>2005 – Expansion</h3>
-          <p>
-            Introduction of science laboratories, a library, and new classrooms
-            to accommodate growth.
-          </p>
-        </div>
-        <div class="timeline-item">
-          <h3>2015 – Recognition</h3>
+          <h3>2025 – Recognition</h3>
           <p>
             Awarded as one of the top-performing schools in the state for
             excellence in academics and extracurriculars.
           </p>
         </div>
         <div class="timeline-item">
-          <h3>2022 – Digital Transformation</h3>
+          <h3>2025 – Digital Transformation</h3>
           <p>
             Adopted modern teaching technologies and e-learning platforms to
             enhance student learning experiences.
@@ -127,7 +156,7 @@
       <div class="footer-container">
         <!-- Column 1: Logo & About -->
         <div class="footer-col">
-          <img src="assets/al-abrar.jpg" alt="school logo" />
+          <img src="assets/al-abrar logo.jpg" alt="school logo" />
           <p class="footer-text">
             Our school is dedicated to providing excellent education that
             combines academics, morals, and discipline to shape the leaders of
@@ -138,9 +167,12 @@
         <!-- Column 2: Address & Contact -->
         <div class="footer-col">
           <h3 class="footer-title">Contact Us</h3>
-          <p>📍 123 Main Street, Katsina, Nigeria</p>
-          <p>📞 +234 800 123 4567</p>
-          <p>✉️ info@yourschool.com</p>
+          <p>
+            📍 Umar Yar’adua Way, Unguwar Sarki Modoji, New GRA, Katsina,
+            Katsina State
+          </p>
+          <p>📞 +234 703 290 5906</p>
+          <p>✉️ alabraracademykatsina@gmail.com</p>
         </div>
 
         <!-- Column 3: Quick Links -->
@@ -176,7 +208,42 @@
         <p>&copy; 2025 Your School. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <!-- script -->
     <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      const closeBtn = document.getElementById("closeBtn");
+
+      const openMenu = () => {
+        navLinks.classList.add("active");
+        navLinks.setAttribute("aria-hidden", "false");
+        menuToggle.setAttribute("aria-expanded", "true");
+        document.body.classList.add("no-scroll");
+      };
+
+      const closeMenu = () => {
+        navLinks.classList.remove("active");
+        navLinks.setAttribute("aria-hidden", "true");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("no-scroll");
+      };
+
+      menuToggle.addEventListener("click", openMenu);
+      closeBtn.addEventListener("click", closeMenu);
+
+      // Close when a link is clicked (mobile UX)
+      navLinks.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", closeMenu);
+      });
+
+      // Close on Esc
+      document.addEventListener("keyup", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+
+      //   scroll-reveal
+
       function revealOnScroll() {
         const sections = document.querySelectorAll("section"); // target sections
         const triggerBottom = window.innerHeight * 0.85;

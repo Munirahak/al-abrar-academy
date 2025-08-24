@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="site-nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <img src="assets/al-abrar logo.jpg" alt="Logo" />
+      </div>
+
+      <!-- Desktop/Mobile links (same list) -->
+      <ul class="nav-links" id="navLinks" aria-hidden="true">
+        <!-- Close button shown only on mobile via CSS -->
+        <li class="close-row">
+          <button class="close-btn" id="closeBtn" aria-label="Close menu">
+            ✖
+          </button>
+        </li>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger (opens overlay on mobile) -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open menu"
+        aria-controls="navLinks"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </nav>
+
+    <!-- hero -->
+    <section class="hero">
+      <!-- Background Slides -->
+      <div class="hero-slide slide1"></div>
+      <div class="hero-slide slide2"></div>
+
+      <!-- Overlay Content -->
+      <div class="hero-content">
+        <h1><u>Welcome to Al-Abrar Academy</u></h1>
+        <p>
+          A distinguished center of learning dedicated to shaping the minds and
+          hearts of future leaders. We believe in the power of knowledge,
+          discipline, and faith to transform lives and societies.
+        </p>
+        <div class="hero-buttons">
+          <a href="about.html" class="btn btn-primary">Learn More</a>
+          <a href="contact.html" class="btn btn-secondary">Enroll Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us-section">
+      <div class="why-us-container">
+        <h2 class="why-us-title scroll-reveal"><u>Why Choose Us</u></h2>
+        <p class="why-us-subtitle scroll-reveal">
+          We provide a unique learning experience designed to nurture and
+          inspire students.
+        </p>
+
+        <div class="why-us-cards">
+          <!-- Card 1 -->
+          <div class="why-card scroll-reveal">
+            <div class="icon">👩‍🏫</div>
+            <h3>Qualified Teachers</h3>
+            <p>
+              Our staff are experienced, passionate, and committed to your
+              child’s success.
+            </p>
+            <button class="why-btn">Read More</button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="why-card scroll-reveal">
+            <div class="icon">📖</div>
+            <h3>Balanced Curriculum</h3>
+            <p>
+              We combine modern education with moral and Islamic values for
+              all-round growth.
+            </p>
+            <button class="why-btn">Read More</button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="why-card scroll-reveal">
+            <div class="icon">🏫</div>
+            <h3>Conducive Environment</h3>
+            <p>
+              A safe, clean, and friendly atmosphere that motivates effective
+              learning.
+            </p>
+            <button class="why-btn">Read More</button>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="why-card scroll-reveal">
+            <div class="icon">🌟</div>
+            <h3>Proven Excellence</h3>
+            <p>
+              Our students consistently excel in academics, morals, and
+              leadership.
+            </p>
+            <button class="why-btn">Read More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <!-- Left Image -->
+        <div class="about-image scroll-reveal">
+          <img src="assets/al-abrar9.jpg" alt="About Our School" />
+        </div>
+
+        <!-- Right Text -->
+        <div class="about-text">
+          <h2 class="scroll-reveal"><u>About Al-Abrar Academy</u></h2>
+          <p class="scroll-reveal">
+            Al-Abrar Academy is dedicated to providing quality education that
+            blends academic excellence with strong moral and spiritual values.
+            Our mission is to nurture disciplined, innovative, and God-fearing
+            future leaders.
+          </p>
+          <a href="about.html" class="about-btn scroll-reveal">Discover More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section class="academics-section">
+      <div class="academics-container">
+        <h2 class="academics-title scroll-reveal">Our Academics</h2>
+        <p class="academics-subtitle scroll-reveal">
+          We offer quality education tailored to different stages of learning.
+        </p>
+
+        <div class="academics-cards">
+          <!-- Nursery Section -->
+          <div class="card scroll-reveal">
+            <div class="icon">🎨</div>
+            <h3>Nursery Section</h3>
+            <p>
+              A warm and playful environment where children start their early
+              learning journey.
+            </p>
+            <button class="card-btn">Learn More</button>
+          </div>
+
+          <!-- Primary Section -->
+          <div class="card scroll-reveal">
+            <div class="icon">📚</div>
+            <h3>Primary Section</h3>
+            <p>
+              Building strong academic foundations and critical thinking skills.
+            </p>
+            <button class="card-btn">Learn More</button>
+          </div>
+
+          <!-- Islamiyya Section -->
+          <div class="card scroll-reveal">
+            <div class="icon">☪️</div>
+            <h3>Islamiyya Section</h3>
+            <p>
+              Providing Islamic knowledge alongside modern education for
+              balanced growth.
+            </p>
+            <button class="card-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <div class="gallery-container">
+        <h2 class="gallery-title scroll-reveal"><u>Our Gallery</u></h2>
+        <p class="gallery-subtitle scroll-reveal">
+          A glimpse into our school life and activities.
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item scroll-reveal">
+            <img src="assets/al-abrar14.jpg" alt="Gallery Image 1" />
+          </div>
+          <div class="gallery-item scroll-reveal">
+            <img src="assets/al-abrar12.jpg" alt="Gallery Image 2" />
+          </div>
+          <div class="gallery-item scroll-reveal">
+            <img src="assets/al-abrar8.jpg" alt="Gallery Image 3" />
+          </div>
+          <div class="gallery-item scroll-reveal">
+            <img src="assets/al-abrar13.jpg" alt="Gallery Image 4" />
+          </div>
+          <div class="gallery-item scroll-reveal">
+            <img src="assets/al-abrar6.jpg" alt="Gallery Image 5" />
+          </div>
+          <div class="gallery-item scroll-reveal">
+            <img src="assets/al-abrar1.jpg" alt="Gallery Image 6" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: Logo & About -->
+        <div class="footer-col">
+          <img src="assets/al-abrar logo.jpg" alt="school logo" />
+          <p class="footer-text">
+            Our school is dedicated to providing excellent education that
+            combines academics, morals, and discipline to shape the leaders of
+            tomorrow.
+          </p>
+        </div>
+
+        <!-- Column 2: Address & Contact -->
+        <div class="footer-col">
+          <h3 class="footer-title">Contact Us</h3>
+          <p>
+            📍 Umar Yar’adua Way, Unguwar Sarki Modoji, New GRA, Katsina,
+            Katsina State
+          </p>
+          <p>📞 +234 703 290 5906</p>
+          <p>✉️ alabraracademykatsina@gmail.com</p>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Why Choose Us</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter & Socials -->
+        <div class="footer-col">
+          <h3 class="footer-title">Newsletter</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Your School. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      const closeBtn = document.getElementById("closeBtn");
+
+      const openMenu = () => {
+        navLinks.classList.add("active");
+        navLinks.setAttribute("aria-hidden", "false");
+        menuToggle.setAttribute("aria-expanded", "true");
+        document.body.classList.add("no-scroll");
+      };
+
+      const closeMenu = () => {
+        navLinks.classList.remove("active");
+        navLinks.setAttribute("aria-hidden", "true");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("no-scroll");
+      };
+
+      menuToggle.addEventListener("click", openMenu);
+      closeBtn.addEventListener("click", closeMenu);
+
+      // Close when a link is clicked (mobile UX)
+      navLinks.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", closeMenu);
+      });
+
+      // Close on Esc
+      document.addEventListener("keyup", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+
+      //   scroll-reveal
+
+      function revealOnScroll() {
+        const sections = document.querySelectorAll("section"); // target sections
+        const triggerBottom = window.innerHeight * 0.85;
+
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+
+          if (rect.top < triggerBottom) {
+            const elements = section.querySelectorAll(".scroll-reveal");
+
+            elements.forEach((el, index) => {
+              setTimeout(() => {
+                el.classList.add("reveal");
+              }, index * 200); // stagger delay (200ms apart)
+            });
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealOnScroll);
+      window.addEventListener("load", revealOnScroll);
+    </script>
+  </body>
+</html>
