@@ -158,20 +158,26 @@ main {
 /* header */
 header {
   background: #c1d2e3;
-  height: 90vh;
+  height: 100vh;
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header h1 {
   font-size: 2rem;
-  margin-top: 30%;
+  /* margin-top: 30%; */
 }
 
 header p {
   font-size: 1rem;
   opacity: 0.9;
+  color: #333;
+  width: 80%;
 }
 
 /* CONTACT INFO */
@@ -284,7 +290,7 @@ button:hover {
   color: #ff6600;
 }
 
-/* ========== RESPONSIVE ========== */
+/* RESPONSIVE */
 @media (min-width: 768px) {
   .contact-info {
     grid-template-columns: repeat(3, 1fr);

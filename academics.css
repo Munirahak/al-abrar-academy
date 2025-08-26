@@ -137,16 +137,19 @@ body {
 
 header {
   background: #c1d2e3;
-  color: #004080;
-  padding: 30px;
+  height: 100vh;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
-  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.head {
-  margin-top: 50%;
-}
+
 header h1 {
   font-size: 2rem;
+  color: #004080;
 }
 header p {
   opacity: 0.9;
@@ -244,7 +247,7 @@ p {
   margin-bottom: 50px;
 }
 
-/* Responsive text center for smaller screens */
+/* Responsive text */
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.5rem;
@@ -277,12 +280,9 @@ p {
   border-radius: 8px;
 }
 
-/* .footer-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 15px;
-  } */
+.footer-col {
+  color: #fff;
+}
 
 .footer-text {
   font-size: 0.95rem;

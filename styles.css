@@ -204,6 +204,7 @@ main {
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 25px;
+  width: 50%;
 }
 
 /* Buttons */
@@ -214,7 +215,7 @@ main {
 }
 .hero-buttons .btn {
   padding: 12px 24px;
-  border-radius: 10% 10% 10% 0;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s ease;
@@ -225,7 +226,9 @@ main {
   color: #004080;
 }
 .btn-primary:hover {
-  background: #e6c200;
+  background: #004080;
+  color: #fff;
+  border: 2px solid #ffd700;
 }
 .btn-secondary {
   background: #004080;
@@ -233,7 +236,8 @@ main {
   border: 2px solid #ffd700;
 }
 .btn-secondary:hover {
-  background: #003366;
+  background: #ffd700;
+  color: #004080;
 }
 
 /* Responsive */
@@ -243,6 +247,7 @@ main {
   }
   .hero-content p {
     font-size: 1rem;
+    width: 100%;
   }
   .hero-buttons {
     flex-direction: column;
@@ -538,8 +543,9 @@ main {
 
 .gallery-item {
   position: relative;
+  height: 90%;
   overflow: hidden;
-  border-radius: 20% 0 20% 0;
+  border-radius: 10% 10% 10% 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -588,14 +594,9 @@ main {
   height: 60px;
   border-radius: 8px;
 }
-
-/* .footer-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 15px;
-  } */
-
+.footer-col p {
+  color: #ddd;
+}
 .footer-text {
   font-size: 0.95rem;
   line-height: 1.6;
